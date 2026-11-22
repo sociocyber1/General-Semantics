@@ -5,7 +5,7 @@ SocioCyberneering Inc. · [sociocyber.site](https://sociocyber.site) · [github.
 
 Документ о том, как слова, ярлыки и оценки работают как вирусы: меняют реакции человека в обход сознательного анализа. Основан на идеях Альфреда Коржибски (*«Наука и Здравомыслие»*, 1933) и Уэнделла Джонсона (цикл ИФД).
 
-Версия: 0.8. Статус: рабочий черновик, возможны ошибки, примеры и поправки приветствуются.
+Языки: русский (`virusology.pdf`) и английский (`virusology_en.pdf`, English edition). Версия: 0.8. Статус: рабочий черновик, возможны ошибки, примеры и поправки приветствуются.
 
 ## Что внутри
 
@@ -26,7 +26,9 @@ SocioCyberneering Inc. · [sociocyber.site](https://sociocyber.site) · [github.
 ```
 virusology/
 ├── virusology.tex            исходник (XeLaTeX + polyglossia)
-├── virusology.pdf            собранный документ
+├── virusology.pdf            собранный документ (русский)
+├── virusology_en.tex         English edition: исходник
+├── virusology_en.pdf         English edition: собранный документ
 ├── fonts/                    статичные Montserrat (Regular, SemiBold, Bold)
 ├── appendix/
 │   └── problem_solving_ru.pdf  рабочая тетрадь, встраивается в конец
@@ -41,6 +43,7 @@ virusology/
 cd virusology
 xelatex virusology.tex
 xelatex virusology.tex   # второй проход: оглавление и ссылки
+# English edition: то же для virusology_en.tex
 ```
 
 Montserrat подключается из `fonts/` как статичный файл. Variable-версия шрифта не подходит: XeTeX берёт из неё самое тонкое начертание.
@@ -53,8 +56,15 @@ Montserrat подключается из `fonts/` как статичный фа
 
 ## Лицензия
 
-GPL-3.0 (текст и код). Автор: SocioCyberneering Inc.
-
-Шрифт Montserrat в `fonts/` распространяется под SIL Open Font License 1.1 (статичные начертания вырезаны из оригинального variable-шрифта).
+GPL-3.0. Автор: SocioCyberneering Inc.
 
 > Не используй меня во вред. Материалы предназначены для защиты от семантических атак, а не для манипуляции людьми.
+
+
+---
+
+## English
+
+**The Virology of Semantic Reactions**: general semantics applied to how words, labels and evaluations act like viruses on human reactions (after Alfred Korzybski and Wendell Johnson). Part I covers the mechanics (IFD cycle, amygdala bypass, semantic reaction injection, attack catalogue). Part II applies it to school: grades as labels, public humiliation as an amygdala trigger, rote learning as data corruption, the label "laziness" as map spoofing, and the antivirus. Includes six diagrams and a clickable glossary. The appendix (a problem-solving workbook) is embedded in its Russian original.
+
+Build: `xelatex virusology_en.tex` twice. Licence: GPL-3.0; Montserrat is under the SIL OFL 1.1.
